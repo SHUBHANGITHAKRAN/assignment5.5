@@ -1,0 +1,220 @@
+
+Conversation with Gemini
+name=Assignment-5.5.md
+
+Assignment 5.5 — CSS Fundamentals Mini-Project[cite: 25]
+
+What to build: Style the multi-page college club website from Week 4[cite: 25].
+
+Steps:
+
+
+
+Use external CSS[cite: 25].
+2. Choose a consistent color palette and typography[cite: 25].
+
+3. Style navigation, headings, paragraphs, and buttons[cite: 25].
+
+4. Make forms and tables readable[cite: 25].
+
+5. Use CSS selectors and variables[cite: 25].
+
+6. Debug styling issues using DevTools[cite: 25].
+
+7. Keep CSS clean and reusable[cite: 25].
+
+Submission: Styled multi-page website, all CSS files, and a 4–5 line explanation of design choices[cite: 25].
+
+Here is a complete, structured guide and template package to help you successfully complete Assignment 5.5 — CSS Fundamentals Mini-Project.
+
+1. Recommended Project Structure
+Make sure your multi-page website files are cleanly organized in your workspace, with all pages linking to a single external stylesheet:
+
+Plaintext
+college-club-website/
+│
+├── index.html
+├── events.html
+├── contact.html
+└── styles.css
+2. Complete Reusable CSS Template (styles.css)
+This stylesheet satisfies all requirements: it uses CSS variables (:root), consistent typography, a professional color palette, and specifically styled navigation, buttons, tables, and forms for maximum readability.
+
+CSS
+/* ==========================================
+   1. CSS Variables & Base Reset
+   ========================================== */
+:root {
+  --primary-color: #2563eb;       /* Professional Blue */
+  --secondary-color: #1e293b;     /* Dark Slate */
+  --accent-color: #f59e0b;        /* Warm Amber */
+  --bg-color: #f8fafc;            /* Soft Light Background */
+  --card-bg: #ffffff;
+  --text-main: #334155;
+  --border-color: #cbd5e1;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ==========================================
+   2. Navigation Bar
+   ========================================== */
+nav {
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav .logo {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent-color);
+}
+
+/* ==========================================
+   3. Typography & Layout Containers
+   ========================================== */
+header, main, footer {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* ==========================================
+   4. Buttons
+   ========================================== */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* ==========================================
+   5. Tables (Readable & Striped)
+   ========================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: var(--card-bg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+/* ==========================================
+   6. Forms (Structured & User-Friendly)
+   ========================================== */
+form {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: inherit;
+  background-color: #ffffff;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+3. Submission: 4–5 Line Explanation of Design Choices
+You can copy and paste this directly into your submission text file or GitHub README:
+
+The website utilizes a cohesive color palette combining deep slate and professional blue with warm amber accents to reflect an engaging, modern academic club aesthetic. CSS custom properties (:root) ensure consistent styling across all pages, while clean semantic selectors maintain code modularity and reusability. Tables incorporate row striping and clear padding, and form inputs feature interactive focus states to maximize readability and user accessibility.
+
+
+
+
+
